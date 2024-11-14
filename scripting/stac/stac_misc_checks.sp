@@ -317,7 +317,7 @@ void checkInterp(int userid)
             Format(message, sizeof(message), "Client was kicked for attempted interp exploitation. Their interp: %.2fms", lerp);
             StacNotify(userid, message);
             KickClient(cl, "%t", "interpKickMsg", lerp, min_interp_ms, max_interp_ms);
-            MC_PrintToChatAll("%t", "interpAllChat", cl, lerp);
+            CPrintToChatAll("%t", "interpAllChat", cl, lerp);
             StacLog("%t", "interpAllChat", cl, lerp);
         }
     }

@@ -495,7 +495,7 @@ void BanUser(int userid, char reason[128], char pubreason[256])
         // KickClient(cl, "%s", reason);
     }
 
-    MC_PrintToChatAll("%s", cleaned_pubreason);
+    CPrintToChatAll("%s", cleaned_pubreason);
     StacLog("%s", pubreason);
 }
 
@@ -626,7 +626,7 @@ void PrintToImportant(const char[] format, any ...)
         {
             SetGlobalTransTarget(i);
             VFormat(buffer, sizeof(buffer), format, 2);
-            MC_PrintToChat(i, "%s", buffer);
+            CPrintToChat(i, "%s", buffer);
         }
     }
 }

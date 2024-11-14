@@ -475,13 +475,13 @@ void turnbindCheck(int cl)
 
         if ( turnSec < stac_max_allowed_turn_secs.FloatValue )
         {
-            MC_PrintToChat(cl, "%t", "turnbindWarnPlayer");
+            CPrintToChat(cl, "%t", "turnbindWarnPlayer");
         }
         else if ( turnSec >= stac_max_allowed_turn_secs.FloatValue )
         {
             StacNotify(userid, "Client was kicked for turn binds");
             KickClient(cl, "%t", "turnbindKickMsg");
-            MC_PrintToChatAll("%t", "turnbindAllChat", cl);
+            CPrintToChatAll("%t", "turnbindAllChat", cl);
             StacLog("%t", "turnbindAllChat", cl);
         }
     }

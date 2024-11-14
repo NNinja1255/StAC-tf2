@@ -196,9 +196,9 @@ public void OnPluginEnd()
 
     StacLog("\n\n----> StAC version [%s] unloaded\n", PLUGIN_VERSION);
 
-    MC_PrintToChatAll("{hotpink}StAC{white} version [%s] unloaded!!! If this wasn't intentional, something nefarious is afoot!", PLUGIN_VERSION);
-    MC_PrintToChatAll("{hotpink}StAC{white} version [%s] unloaded!!! If this wasn't intentional, something nefarious is afoot!", PLUGIN_VERSION);
-    MC_PrintToChatAll("{hotpink}StAC{white} version [%s] unloaded!!! If this wasn't intentional, something nefarious is afoot!", PLUGIN_VERSION);
+    CPrintToChatAll("{hotpink}StAC{white} version [%s] unloaded!!! If this wasn't intentional, something nefarious is afoot!", PLUGIN_VERSION);
+    CPrintToChatAll("{hotpink}StAC{white} version [%s] unloaded!!! If this wasn't intentional, something nefarious is afoot!", PLUGIN_VERSION);
+    CPrintToChatAll("{hotpink}StAC{white} version [%s] unloaded!!! If this wasn't intentional, something nefarious is afoot!", PLUGIN_VERSION);
 
     StacNotify(0, "StAC was just unloaded!!! Was this intentional??");
 
