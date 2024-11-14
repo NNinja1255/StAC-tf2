@@ -115,10 +115,12 @@ public void OnPluginStart()
     checkOS();
 
     // updater
+	/*
     if (LibraryExists("updater"))
     {
         Updater_AddPlugin(UPDATE_URL);
     }
+	*/
 
     // reg admin commands
     RegConsoleCmd("sm_stac_checkall",   checkAdmin, "Force check all client convars (ALL CLIENTS) for anticheat stuff");
