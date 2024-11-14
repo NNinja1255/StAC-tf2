@@ -74,7 +74,7 @@ void StacLog(const char[] format, any ...)
     char buffer[254];
     VFormat(buffer,         sizeof(buffer),         format, 2);
     // clear color tags
-    MC_RemoveTags(buffer, sizeof(buffer));
+    CRemoveTags(buffer, sizeof(buffer));
 
     char nowtime[64];
     int int_nowtime = GetTime();

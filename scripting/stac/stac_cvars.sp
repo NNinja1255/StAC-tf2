@@ -394,6 +394,21 @@ void initCvars()
         true,
         1.0
     );
+	
+	stac_misccheats_kick =
+    AutoExecConfig_CreateConVar
+    (
+        "stac_misccheats_kick",
+        "0",
+        "[StAC] Kick players for misc cheats instead of outright banning them.\n\
+		For cases where you want to give exploiters a lighter punishment than actual cheaters.\n\
+        (recommended 0)",
+        FCVAR_NONE,
+        true,
+        0.0,
+        true,
+        1.0
+    );
 
     initUsercmdCvars();
     // actually exec the cfg after initing cvars lol

@@ -3,9 +3,6 @@
 #endif
 #define _webcon_included
 
-#pragma semicolon 1
-#pragma newdecls required
-
 #define WEB_CLIENT_ADDRESS_LENGTH 46
 
 //const char WebMethod_Connect[] = "CONNECT";

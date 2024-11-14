@@ -134,7 +134,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
                 oobVarsNotify(userid, cvarName, cvarValue);
                 if (stac_ban_for_misccheats.BoolValue)
                 {
-                    oobVarBan(userid);
+                    if (stac_misccheats_kick.BoolValue)
+					{
+						oobVarKick(userid);
+					}
+					{
+						oobVarBan(userid);
+					}
                 }
             }
         }
@@ -149,7 +155,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
             oobVarsNotify(userid, cvarName, cvarValue);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                oobVarBan(userid);
+                if (stac_misccheats_kick.BoolValue)
+				{
+					oobVarKick(userid);
+				}
+				{
+					oobVarBan(userid);
+				}
             }
         }
     }
@@ -165,7 +177,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
             oobVarsNotify(userid, cvarName, cvarValue);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                oobVarBan(userid);
+                if (stac_misccheats_kick.BoolValue)
+				{
+					oobVarKick(userid);
+				}
+				{
+					oobVarBan(userid);
+				}
             }
         }
     }
@@ -180,7 +198,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
             oobVarsNotify(userid, cvarName, cvarValue);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                oobVarBan(userid);
+                if (stac_misccheats_kick.BoolValue)
+				{
+					oobVarKick(userid);
+				}
+				{
+					oobVarBan(userid);
+				}
             }
         }
     }
@@ -194,7 +218,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
             oobVarsNotify(userid, cvarName, cvarValue);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                oobVarBan(userid);
+                if (stac_misccheats_kick.BoolValue)
+				{
+					oobVarKick(userid);
+				}
+				{
+					oobVarBan(userid);
+				}
             }
         }
     }
@@ -208,7 +238,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
             oobVarsNotify(userid, cvarName, cvarValue);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                oobVarBan(userid);
+                if (stac_misccheats_kick.BoolValue)
+				{
+					oobVarKick(userid);
+				}
+				{
+					oobVarBan(userid);
+				}
             }
         }
     }
@@ -222,7 +258,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
             oobVarsNotify(userid, cvarName, cvarValue);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                oobVarBan(userid);
+                if (stac_misccheats_kick.BoolValue)
+				{
+					oobVarKick(userid);
+				}
+				{
+					oobVarBan(userid);
+				}
             }
         }
     }
@@ -236,7 +278,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
             oobVarsNotify(userid, cvarName, cvarValue);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                oobVarBan(userid);
+                if (stac_misccheats_kick.BoolValue)
+				{
+					oobVarKick(userid);
+				}
+				{
+					oobVarBan(userid);
+				}
             }
         }
     }
@@ -250,7 +298,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
             oobVarsNotify(userid, cvarName, cvarValue);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                oobVarBan(userid);
+                if (stac_misccheats_kick.BoolValue)
+				{
+					oobVarKick(userid);
+				}
+				{
+					oobVarBan(userid);
+				}
             }
         }
     }
@@ -265,7 +319,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
             oobVarsNotify(userid, cvarName, cvarValue);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                oobVarBan(userid);
+                if (stac_misccheats_kick.BoolValue)
+				{
+					oobVarKick(userid);
+				}
+				{
+					oobVarBan(userid);
+				}
             }
         }
     }
@@ -281,7 +341,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
             oobVarsNotify(userid, cvarName, cvarValue);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                oobVarBan(userid);
+                if (stac_misccheats_kick.BoolValue)
+				{
+					oobVarKick(userid);
+				}
+				{
+					oobVarBan(userid);
+				}
             }
         }
     }
@@ -301,7 +367,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
             oobVarsNotify(userid, cvarName, cvarValue);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                oobVarBan(userid);
+                if (stac_misccheats_kick.BoolValue)
+				{
+					oobVarKick(userid);
+				}
+				{
+					oobVarBan(userid);
+				}
             }
         }
     }
@@ -334,7 +406,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
         illegalVarsNotify(userid, cvarName);
         if (stac_ban_for_misccheats.BoolValue)
         {
-            illegalVarBan(userid);
+            if (stac_misccheats_kick.BoolValue)
+			{
+				illegalVarKick(userid);
+			}
+			{
+				illegalVarBan(userid);
+			}
         }
     }
     // log something about cvar errors
@@ -374,6 +452,14 @@ void oobVarBan(int userid)
     CreateTimer(0.1, Timer_BanUser, pack, TIMER_DATA_HNDL_CLOSE);
     return;
 }
+void oobVarKick(int userid)
+{
+    int cl = GetClientOfUserId(userid);
+	KickClient(cl, "%t", "oobVarKickMsg");
+    CPrintToChatAll("%t", "oobVarKickAllChat", cl);
+    StacLog("%t", "oobVarKickAllChat", cl);
+    return;
+}
 
 void illegalVarBan(int userid)
 {
@@ -392,6 +478,14 @@ void illegalVarBan(int userid)
     ResetPack(pack, false);
     // make data timer
     CreateTimer(0.1, Timer_BanUser, pack, TIMER_DATA_HNDL_CLOSE);
+    return;
+}
+void illegalVarKick(int userid)
+{
+    int cl = GetClientOfUserId(userid);
+    KickClient(cl, "%t", "cheatVarKickMsg");
+    CPrintToChatAll("%t", "cheatVarKickAllChat", cl);
+    StacLog("%t", "cheatVarKickAllChat", cl);
     return;
 }
 
