@@ -385,7 +385,13 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
             oobVarsNotify(userid, cvarName, cvarValue);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                oobVarBan(userid);
+                if (stac_misccheats_kick.BoolValue)
+				{
+					oobVarKick(userid);
+				}
+				{
+					oobVarBan(userid);
+				}
             }
         }
     }
@@ -455,7 +461,7 @@ void oobVarBan(int userid)
 void oobVarKick(int userid)
 {
     int cl = GetClientOfUserId(userid);
-	KickClient(cl, "%t", "oobVarKickMsg");
+	KickClient(userid, "%t", "oobVarKickMsg");
     CPrintToChatAll("%t", "oobVarKickAllChat", cl);
     StacLog("%t", "oobVarKickAllChat", cl);
     return;
@@ -483,7 +489,7 @@ void illegalVarBan(int userid)
 void illegalVarKick(int userid)
 {
     int cl = GetClientOfUserId(userid);
-    KickClient(cl, "%t", "cheatVarKickMsg");
+    KickClient(userid, "%t", "cheatVarKickMsg");
     CPrintToChatAll("%t", "cheatVarKickAllChat", cl);
     StacLog("%t", "cheatVarKickAllChat", cl);
     return;

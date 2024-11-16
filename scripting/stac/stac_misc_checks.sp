@@ -20,11 +20,21 @@ public Action OnClientSayCommand(int cl, const char[] command, const char[] sArg
         int userid = GetClientUserId(cl);
         if (stac_ban_for_misccheats.BoolValue)
         {
-            char reason[128];
-            Format(reason, sizeof(reason), "%t", "newlineBanMsg");
-            char pubreason[256];
-            Format(pubreason, sizeof(pubreason), "%t", "newlineBanAllChat", cl);
-            BanUser(userid, reason, pubreason);
+			if (stac_misccheats_kick.BoolValue)
+			{
+				KickClient(userid, "%t", "newlineKickMsg");
+				CPrintToChatAll("%t", "newlineKickAllChat", cl);
+				StacLog("%t", "newlineKickAllChat", cl);
+			}
+			else
+			{
+				char reason[128];
+				Format(reason, sizeof(reason), "%t", "newlineBanMsg");
+				char pubreason[256];
+				Format(pubreason, sizeof(pubreason), "%t", "newlineBanAllChat", cl);
+				BanUser(userid, reason, pubreason);
+			}
+			
         }
         else
         {
@@ -48,11 +58,19 @@ Action BanName(Handle timer, int userid)
 
     if (stac_ban_for_misccheats.BoolValue)
     {
-        char reason[128];
-        Format(reason, sizeof(reason), "%t", "illegalNameBanMsg");
-        char pubreason[256];
-        Format(pubreason, sizeof(pubreason), "%t", "illegalNameBanAllChat", cl);
-        BanUser(userid, reason, pubreason);
+		if (stac_misccheats_kick.BoolValue)
+		{
+			KickClient(userid, "%t", "illegalNameKickMsg");
+			CPrintToChatAll("%t", "illegalNameKickAllChat", cl);
+			StacLog("%t", "illegalNameKickAllChat", cl);
+		}
+		else
+		{
+			char reason[128];
+			Format(reason, sizeof(reason), "%t", "illegalNameBanMsg");
+			char pubreason[256];
+			Format(pubreason, sizeof(pubreason), "%t", "illegalNameBanAllChat", cl);
+			BanUser(userid, reason, pubreason);
     }
     else
     {
@@ -194,7 +212,13 @@ public void OnClientSettingsChanged(int cl)
         oobVarsNotify(userid, "cl_cmdrate", cl_cmdrate);
         if (stac_ban_for_misccheats.BoolValue)
         {
-            oobVarBan(userid);
+            if (stac_misccheats_kick.BoolValue)
+			{
+				oobVarKick(userid);
+			}
+			{
+				oobVarBan(userid);
+			}
         }
     }
 
@@ -303,7 +327,13 @@ void checkInterp(int userid)
             oobVarsNotify(userid, "m_fLerpTime", lerpStr);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                oobVarBan(userid);
+				if (stac_misccheats_kick.BoolValue)
+				{
+					oobVarKick(userid);
+				}
+				{
+					oobVarBan(userid);
+				}
             }
         }
         else if
@@ -347,12 +377,22 @@ void cheevCheck(int userid, int achieve_id)
 
         if (stac_ban_for_misccheats.BoolValue)
         {
-            PrintToImportant("{hotpink}[StAC] {white} User %N earned BOGUS achievement ID %i (hex %X)", cl, achieve_id, achieve_id);
-            char reason[128];
-            Format(reason, sizeof(reason), "%t", "bogusAchieveBanMsg");
-            char pubreason[256];
-            Format(pubreason, sizeof(pubreason), "%t", "bogusAchieveBanAllChat", cl);
-            BanUser(userid, reason, pubreason);
+			if (stac_misccheats_kick.BoolValue)
+			{
+				PrintToImportant("{hotpink}[StAC] {white} User %N earned BOGUS achievement ID %i (hex %X)", cl, achieve_id, achieve_id);
+				KickClient(userid, "%t", "bogusAchieveKickMsg");
+				CPrintToChatAll("%t", "bogusAchieveKickAllChat", cl);
+				StacLog("%t", "bogusAchieveKickAllChat", cl);
+			}
+			else
+			{
+				PrintToImportant("{hotpink}[StAC] {white} User %N earned BOGUS achievement ID %i (hex %X)", cl, achieve_id, achieve_id);
+				char reason[128];
+				Format(reason, sizeof(reason), "%t", "bogusAchieveBanMsg");
+				char pubreason[256];
+				Format(pubreason, sizeof(pubreason), "%t", "bogusAchieveBanAllChat", cl);
+				BanUser(userid, reason, pubreason);
+			}
         }
         else
         {
