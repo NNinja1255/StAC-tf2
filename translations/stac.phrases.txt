@@ -298,6 +298,15 @@
         "es"        "[StAC] Baneado por caracteres no permitidos en nombre"
         "de"        "[StAC] Gebannt für nicht erlaubte Character im Namen"
     }
+    "illegalNameKickAllChat"
+    {
+        "#format"   "{1:N}"
+        "en"        "{hotpink}[StAC]{white} Player {1} had {mediumpurple}illegal characters{white} in their name. {palegreen}Kicked from server."
+    }
+    "illegalNameKickMsg"
+    {
+        "en"        "[StAC] Kicked for illegal chars in name"
+    }
     // out of bounds cvars
     "oobVarBanAllChat"
     {
@@ -327,7 +336,7 @@
     }
     "oobVarKickMsg"
     {
-        "en"        "[StAC] You have OOB cvar/netvar values. Fix them and you can rejoin."
+        "en"        "[StAC] Kicked for OOB cvar/netvar values"
     }
     // misc known cheat cvars
     "cheatVarBanAllChat"
@@ -354,23 +363,11 @@
     "cheatVarKickAllChat"
     {
         "#format"   "{1:N}"
-        "en"        "{hotpink}[StAC]{white} Player {1} had {mediumpurple}a known cheat cvar{white}! {palegreen}BANNED from server!"
-        //"da"        ""
-        "ru"        "{hotpink}[StAC]{white} У игрока {1} была {mediumpurple}известная чит-переменная{white}! {palegreen}ЗАБАНЕН с сервера!"
-        "pt"        "{hotpink}[StAC]{white} O(A) jogador(a) tinha {mediumpurple}uma cvar conhecida de cheat{white}! {palegreen}BANIDO(A) do servidor!"
-        "chi"       "{hotpink}[StAC]{white} 检测到玩家 {1} 使用了 {mediumpurple}非法作弊指令{white}. {palegreen}已禁止进入服务器!"
-        "es"        "{hotpink}[StAC]{white} El jugador {1} tiene {mediumpurple}un cvar de trampa activo{white}! {palegreen}BANEADO del servidor!"
-        "de"        "{hotpink}[StAC]{white} Spieler {1} hat {mediumpurple}eine bekannte Cheat cvar{white}! {palegreen}Gebannt vom Server!"
+        "en"        "{hotpink}[StAC]{white} Player {1} had {mediumpurple}a known cheat cvar{white}. {palegreen}Kicked from server."
     }
     "cheatVarKickMsg"
     {
-        "en"        "[StAC] You have known cheat cvars. Fix them and you can rejoin."
-        //"da"        ""
-        "ru"        "[StAC] Забанен за наличие известных чит-переменных"
-        "pt"        "[StAC] Banido(a) por ter cvars conhecidas de cheats"
-        "chi"       "[StAC] 检测 {1} 次使用非法作弊指令后封禁"
-        "es"        "[StAC] Baneado por tener un cvar de trampa activo"
-        "de"        "[StAC] Gebannt vom Server für bekannte Cheat cvars"
+        "en"        "[StAC] Kicked for having known cheat cvars"
     }
     // cheevs
     "bogusAchieveBanAllChat"
@@ -390,6 +387,15 @@
         "es"        "[StAC] Baneado por valores de logros falsos"
         "de"        "[StAC] Gebannt für falsche Achievements"
     }
+    "bogusAchieveKickAllChat"
+    {
+        "#format"   "{1:N}"
+        "en"        "{hotpink}[StAC]{white} Player {1} unlocked {mediumpurple}a invalid achievement{white}. {palegreen}Kicked from server."
+    }
+    "bogusAchieveKickMsg"
+    {
+        "en"        "[StAC] Kicked for bogus achievement values"
+    }
     // newlines in chat
     "newlineBanAllChat"
     {
@@ -401,6 +407,15 @@
     {
         "en"        "[StAC] Banned for using illegal characters in chat"
         "es"        "[StAC] Baneado por caracteres no permitidos en la charla"
+    }
+    "newlineKickAllChat"
+    {
+        "#format"   "{1:N}"
+        "en"        "{hotpink}[StAC]{white} Player {1} used {mediumpurple}illegal characters{white} in the chat. {palegreen}Kicked from server."
+    }
+    "newlineKickMsg"
+    {
+        "en"        "[StAC] Kicked for using illegal characters in chat"
     }
     /*
         __   _      __
