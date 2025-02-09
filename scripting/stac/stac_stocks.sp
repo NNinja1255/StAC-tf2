@@ -694,6 +694,7 @@ bool IsZeroVector(const float vec[3])
 
 /********** UPDATER **********/
 
+/*
 public void OnLibraryAdded(const char[] name)
 {
     if (StrEqual(name, "updater"))
@@ -701,6 +702,7 @@ public void OnLibraryAdded(const char[] name)
         Updater_AddPlugin(UPDATE_URL);
     }
 }
+*/
 
 /********** DETECTIONS & DISCORD **********/
 
