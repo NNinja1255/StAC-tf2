@@ -46,7 +46,7 @@
 #include <autoexecconfig>
 #include <json>
 #undef REQUIRE_PLUGIN
-#tryinclude <updater>
+//#tryinclude <updater>
 #tryinclude <sourcebanspp>
 #tryinclude <materialadmin>
 #tryinclude <discord>
