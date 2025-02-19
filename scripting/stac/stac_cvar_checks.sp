@@ -289,13 +289,7 @@ public void ConVarCheck(QueryCookie cookie, int cl, ConVarQueryResult result, co
             oobVarsNotify(userid, cvarName, cvarValue);
             if (stac_ban_for_misccheats.BoolValue)
             {
-                if (stac_misccheats_kick.BoolValue)
-				{
-					oobVarKick(userid);
-				}
-				{
-					oobVarBan(userid);
-				}
+                oobVarBan(userid);
             }
         }
     }
